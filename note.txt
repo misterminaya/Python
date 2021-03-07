@@ -1,0 +1,51 @@
+
+#Cadenas (Strings)
+- Los objetos de tipo str pueden representarse con "" or ''.
+- El operador + tiene diferente significado segun el tipo de dato (overloaded). Con cadenas significa concatenacion.
+- El operador * es el operador de repeticion con cadenas
+- Las cadenas son inmutables 
+
+# Entradas (inputs) 
+- Python tiene la funcion input para recibir datos del usuario del programa
+- Input siempre regresa cadenas, por lo que si queremos utilizar otro tipo, tenemos que hacer type >> Type Casting 
+
+# Iteraciones (loops)
+- La mayoría de las tareas computacionales no se pueden lograr con ramificaciones.
+- Cuando queremos un programa haga la mismo varias veces. utilizamos iteraciones.
+- Se pueden escribir iteraciones dentro de iteraciones
+- Podemos utilizar break para salir anticipadamente de una iteracion.
+- Tener cudidado de iteraciones infinitas.
+
+
+#1 algoritmo : la enumeracion exhaustiva
+#2 algoritmo : aproximación de solución --- el margen de error se llama epsilon.
+#3 algoritmo : busqueda binarias
+
+
+Recursividad
+- Algorítmica : Una forma de crear soluciones utilizando el principio de  "divide y vencerás"
+- Programática : Una técnica programática mediante la cual una función se llama a sí misma.
+
+¿Que son la Tuplas?
+- Son secuencias inmutables de objetos.
+- A diferencia de las cadenas pueden contener cualquier tipo de objeto.
+- Puede utilizarse para devolver varios valores en una función.
+
+Clonación:
+- Casi siempre es mejor clonar una lista en vez de mutarla
+- Para clonar una lista podemos utilizar rebanadas(slices) o la funcion list
+
+List Comprehension
+- Es una forma concisa de aplicar operaciones a los valores de una secuencia
+- Tambien se pueden aplicar condiciones para filtrar
+
+Diccionarios
+- Son como listas, pero en lugar de usar índices utilizan llaves
+- No tienen orden interno
+- Los diccionarios son mutables
+- Pueden Iterarse
+
+Pruebas de caja negra
+- Se basan en la especificación de la función o el programa.
+- Prueba de inputs y valida outputs
+- Unit Testing o Integration Testing 

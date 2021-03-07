@@ -1,0 +1,104 @@
+###### Lista de ejercicios para una semana de practica
+
+#1. Desarrolle un algoritmo que permita leer dos valores distintos, determinar cuál de los dos valores es el mayor y escribirlo
+
+#2. Se requiere un algoritmo para determinar el cambio que recibirá una persona que adquiere un producto en la tienda
+
+#3 Crear un diagrama de flujo de procesos en el que se almacenen 3 números en 3 variables A, B y C. El diagrama debe decidir cuál es el mayor y cuál es el menor.
+
+#4. Lee los tres lados de un triangulo rectangulo, determina si corresponden (por Pitargoras) y en caso afirmativo , calcula el area
+
+#5. Escribir un Pseudocódigo de un programa que permita leer la edad y peso de una persona y posteriormente imprimirla
+
+#6. Escribir un Pseudocódigo que calcule el área de un triángulo recibiendo como entrada el valor de base y altura
+
+#7.  ejercicio pendiente
+
+#8. Escribir Pseudocodigo que dados 2 valores de entrada imprima siempre la división del mayor entre el menor.
+
+#9. Escribir un Pseudocódigo que lea 3 números los cuales significan una fecha (día, mes, año). Comprobar que sea válida la fecha, si no es válido -->
+# que imprima un mensaje de error, y si es válida imprimir el mes con su nombre.
+
+#10. Escribir un Pseudocodigo que pida la edad y el sexo y dependiendo si es hombre o mujer y si puede votar o no
+
+#11. Realice un Pseudocódigo que calcule la nómina salarial neto, de unos obreros cuyo trabajo se paga en horas. El cálculo se realiza de la siguiente forma:
+#- Las primeras 35 horas a una tarifa fija.
+#- Las horas extras se pagan a 1.5 más de la tarifa fija.
+#- Los impuestos a deducir de los trabajadores varian,
+#segun el sueldo mensual si el sueldo es menos a $20,000.00 el sueldo es libre de impuesto y si es al contrario se cobrará un 20% de impuesto
+
+
+#12.Escribir un Pseudocódigo que encuentre y despliegue los números primos entre uno y cien. Un número primo es divisible entre
+#el mismo y la unidad por lo tanto un numero primo no puede ser par excepto el dos (2)
+
+#13.Una tienda ofrece un descuento del 15% sobre el total de la compra durante el mes de octubre. Dado un mes y un importe,   -->
+#calcular cuál es la cantidad que se debe cobrar al cliente.
+
+#14. Dados 10 números enteros que se ingresan por teclado, calcular cuántos de ellos son pares,cuánto suman ellos y el promedio de los impares
+
+#15. Crea una aplicación que nos pida un día de la semana y que nos diga si es un dia laboral o no. Usa un switch para ello
+
+#16. Muestra los números del 1 al 100 (ambos incluidos) divisibles entre 2 y 3. Utiliza el bucle que desees.
+
+#17. Cuenta la cantidad de vocales en forma independiente que se encuentren dentro de un texto introducido por el usuario
+
+#18. Calcular las calificaciones  de un  grupo de  alumnos. La nota  final de  cada alumno  se calcula según el siguiente criterio: la parte práctica vale el 10%;
+#la parte de problemas vale el 50% y la parte teórica el 40%. El algoritmo leerá el nombre del alumno, las tres notas, escribirá el resultado y volverá a pedir
+#los datos del siguiente alumno hasta que el nombre sea una cadena vacía. Las notas deben estar entre 0 y 10, si no lo están, no imprimirá las notas, mostrara
+#un mensaje de error y volverá a pedir otro alumno
+
+#19. Calcula el Cuadrado y el Cubo de los 5 primeros números enteros que siguen a uno ingresado por teclado.
+
+#20. Multiplica por 2 y divide entre 4 cualquier cantidad ingresada por teclado
+
+#21. Se desea validar una clave que sea 123456 hasta en tres oportunidades.
+
+#22. Ingrese un numero y Determine si es múltiplo de 3
+
+#23. Ingrese un número y Determine si s Par o Impar
+
+#24. Diseñar un algoritmo que pida por teclado tres números; si el primero es negativo, debe imprimir el producto de los tres y si no lo es, imprimirá la suma.
+
+#25. Realizar un algoritmo que lea un número por teclado. En caso de que ese número sea 0 o menor que 0, se saldrá del programa imprimiendo antes un
+#mensaje de error. Si es mayor que 0, se deberá calcular su cuadrado y la raiz cuadrada del mismo, visualizando el numero que ha tecleado el usuario
+# y su resultado (“Del numero X, su potencia es X y su raiz X” ). Para calcular la raiz cuadrada se puede usar la función interna RAIZ(X)  o con una potencia de 0,5.
+
+#26. Un colegio desea saber qué porcentaje de niños y qué porcentaje de niñas hay en el curso actual. Diseñar un algoritmo para este propósito
+#(recuerda que para calcular el porcentaje puedes hacer una regla de 3).
+
+#27. Modificar el algoritmo anterior, de forma que si se teclea un cero, se vuelva a pedir el número por teclado (así hasta que se teclee un número mayor que cero) (recuerda la estructura mientras).
+
+#28 .Se pide representar el algoritmo que nos calcule la suma de los N primeros números pares. Es decir, si insertamos un 5, nos haga la suma de 6+8+10+12+14
+
+#29. Teniendo en cuenta que la clave es “eureka”, escribir un algoritmo que nos pida una clave. Solo tenemos 3 intentos para acertar, si fallamos los 3 intentos nos mostrara un mensaje indicándonos
+# que hemos agotado esos 3 intentos. (Recomiendo utilizar un interruptor). Si acertamos la clave, saldremos directamente del programa.
+
+#30. Algoritmo que lea un número entero (lado) y a partir de él cree un cuadrado de asteriscos con ese tamaño. Los asteriscos sólo se verán en el borde del cuadrado, no en el interior.
+
+#31. Algoritmo que lea un número entero (altura) y a partir de él cree una escalera invertida de asteriscos con esa altura. Debera quedar asi, si ponemos una altura de 5.
+
+#32.Algoritmo que dado un año, nos diga si es bisiesto o no. Un año es bisiesto bajo las siguientes condiciones:
+#-Un año divisible por 4 es bisiesto y no debe ser divisible entre 100.
+#Si un año es divisible entre 100 y además es divisible entre 400, también resulta bisiesto.
+#NOTA: este ejercicio tiene muchas formas de hacerlo si quieres comprobar que es correcto, puedes probarlo aquí, también -->
+#encontraras información sobre las condiciones de cuando un año es bisiesto.
+
+#33. El siguiente es el menú de un restaurante de bocadillos. Diseñar un algoritmo capaz de leer el número de unidades consumidas de cada alimento ordenado y calcular la cuenta total. Vamos
+# a suponer que estos precios son fijos, es decir, que son constantes (recuerda que en PSeInt no se usa comas para separar la parte decimal de la parte entera).
+
+
+#34. Diseñar el algoritmo (ordinograma y pseudocódigo) correspondiente a un programa -->
+# que escribe el porcentaje descontado en una compra, introduciendo por teclado el -->
+# precio de la tarifa y el precio pagado.
+
+
+#35. Diseñar el algoritmo (ordinograma y pseudocódigo) correspondiente a un programa
+# que obtiene la última cifra de un número introducido.
+
+#36. Diseñar el algoritmo (ordinograma y pseudocódigo) correspondiente a un programa
+#que tras introducir una medida expresada en centímetros la convierta en pulgadas (1
+#pulgada = 2,54 centímetros)
+
+#37. Diseñar el algoritmo (ordinograma y pseudocódigo) correspondiente a un programa
+#que al introducir una cantidad de dinero expresado en euros nos indique cuántos
+#billetes y monedas se puede tener como mínimo
