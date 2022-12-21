@@ -1,3 +1,215 @@
+# Variables 
+
+```python
+curso = 'Curso profesional de python'
+print(curso)
+
+# Modfificar el contenido de la variables
+
+curso = 'Curso python'
+
+```
+
+## Variables contantes
+Por convencio, la variables constantes se nombran en mayúsculas
+
+```python
+TITULO_CURSO = 'Python'
+print(TITULO_CURSO)
+```
+
+
+
+# Palabras reservadas en python
+Toda la lista de palabras reservadas [link](https://linktodocumentation)
+
+
+# Tipos de datos 
+
+- **INT** : Amacena valores enteros que pueden ser positivos o negativos y no contienen ningun punto decimal
+
+```python
+num1 = 10
+num2 = 15 
+
+```
+- **FLOAT** : Estos son números reales de coma flotante que almacenan los valores decimales. se trata de partes enteras y fraccionarias.
+
+```python
+fnum1 = 23,5
+fnum2 = 67,8 
+```
+
+- **COMPLEJO** : Números complejos especificados como parte real y parte imaginaria. Se almacenan de forma de a + bj  donde **a** es la parte real y **bj** representa la parte imaginaria.
+
+```python
+cnum1 = 2 + 3j
+cnum2 = 5 - 7j
+
+type(cnum1)
+<class 'complex'>
+```
+
+- **BOOL** :  True - False 
+
+```python
+valor = False
+```
+
+# Operadores Básicos 
+
+
+### Operadores Relacionales
+
+Un operador relacional se emplea para comparar y establecer la relación entre ellos. Devuelve un valor booleando (true o false) basado en la condición
+
+| OPERADOR  | DESCRIPCIÓN                                                                                   | USO                       |
+| ----------| --------------------------------------------------------------------------------------------- | ------------------------- |
+|    >      | Devuelve True si el operador de la izquierda es mayor que el operador de la derecha           | 12 > 3 devuelve True      |
+|   <       | Devuelve True si el operador de la derecha es mayor que el operador de la izquierda           | 12 < 3 devuelve False     |
+|   ==      | Devuelve True si ambos operandos son iguales                                                  | 	12 == 3 devuelve False  |
+|   >=      | Devuelve True si el operador de la izquierda es mayor o igual que el operador de la derecha   | 12 >= 3 devuelve True     |
+|   <=      | Devuelve True si el operador de la derecha es mayor o igual que el operador de la izquierda	| 12 <= 3 devuelve False    |
+|   !=      | Devuelve True si ambos operandos no son iguales                                               | 12 != 3 devuelve True     |
+
+
+### Operadores Aritméticos
+
+Un operador aritmético toma dos operandos como entrada, realiza un cálculo y devuelve el resultado.
+
+| OPERADOR  | DESCRIPCIÓN                                            | USO                       |
+| ----------| -------------------------------------------------------| ------------------------- |
+|    +      | Realiza Adición entre los operandos                    | 12 + 3 = 15               |
+|   -       | Realiza Substracción entre los operandos               | 12 - 3 = 9                |
+|    *      | Realiza Multiplicación entre los operandos             | 12 * 3 = 36               |
+|   /       | Realiza División entre los operandos                   | 12 / 3 = 4                |
+|    %      | Realiza un módulo entre los operandos	                 | 16 % 3 = 1                |
+|   **      | Realiza la potencia de los operandos                   | 12 ** 3 = 1728            |
+|   //      | Realiza la división con resultado de número entero     | 18 // 5 = 3               |
+
+
+
+### Operadores Bit a Bit
+
+Un operador bit a bit realiza operaciones en los operandos bit a bit
+- Consideremos a = 2 (en binario = 10) y b = 3 (en binario = 11) para los siguientes casos.
+
+| OPERADOR  | DESCRIPCIÓN                                                                                                            | USO                       |
+| ----------| -----------------------------------------------------------------------------------------------------------------------| ------------------------- |
+|    &      | Realiza bit a bit la operación AND en los operandos                                                                    |a & b = 2 (Binario: 10 & 11 = 10)            |
+|    !      | Realiza bit a bit la operación OR en los operandos                                                                     | a or b = 3 (Binario: 10 | 11 = 11)              |
+|    ^      | Realiza bit a bit la operación XOR en los operandos                                                                    | a ^ b = 1 (Binario: 10 ^ 11 = 01)              |
+|    ~      | Realiza bit a bit la operación NOT bit a bit. Invierte cada bit en el operando                                         | ~a = -3 (Binario: ~(00000010) = (11111101))          |
+|    >>     | Desplaza los bits del operador de la izquierda a la derecha tantos bits como indica el operador de la derecha          | a >> b = 0 (Binario: 00000010 >> 00000011 = 0)          |
+|    <<     | Desplaza los bits del operando de la izquierda a la izquierda tantos bits como especifique el operador de la derecha   | a << b = 16 (Binario: 00000010 << 00000011 = 00001000)|
+
+
+### Operadores de Asignación
+
+Se utiliza un operador de asignación para asignar valores a una variable. Esto generalmente se combina con otros operadores
+(como aritmetica, bit a bit) donde la operación se realiza en los operandos y el resultado se asigna al operando izquierdo.
+
+| OPERADOR  | DESCRIPCIÓN                                    |
+| ----------| -----------------------------------------------|
+|    =      |  a = 5. El valor 5 es asignado a la variable a |
+|   +=      |  a += 5 es equivalente a a = a + 5             |
+|   -=      |  a -= 5 es equivalente a a = a - 5             |
+|   *=      |  a *= 3 es equivalente a a = a * 3             |
+|   /=      |  a /= 3 es equivalente a a = a / 3             |
+|   %=      |  a %= 3 es equivalente a a = a % 3             |
+|   **=     |  a **= 3 es equivalente a a = a ** 3           |
+|   //=     |  a //= 3 es equivalente a a = a // 3           |
+|   &=      |  a &= 3 es equivalente a a = a & 3             |
+|   1=      |  a 1= 3 es equivalente a a = a 1 3             |
+|   ^=      |  a ^= 3 es equivalente a a = a ^ 3             |
+|   >>=     |  a >>= 3 es equivalente a a = a >> 3           |
+|   <<=     |  a <<= 3 es equivalente a a = a << 3           |
+
+
+### Operadores Lógicos 
+Se utiliza un operador lógico para tomar una decisión basada en múltiples condiciones. Los
+operadores lógicos utilizados en Python son and, or, y not
+
+
+| OPERADOR  | DESCRIPCIÓN                                            | USO                       |
+| ----------| -------------------------------------------------------| ------------------------- |
+|    and    | Devuelve True si ambos operandos son True              | 	a and b                  |
+|    or     | Devuelve True si alguno de los operandos es True       |  a or b                   |
+|    not    | Devuelve True si alguno de los operandos False         |  not a                    |
+
+
+### Operadores de pertenencia
+
+Un operador de pertenencia se emplea para identificar pertenencia en alguna secuencia(lista, strings, tuplas)
+
+- **in** y **not in** son operadores de pertenencia
+- **in** devuelve True si el valor especificado se encuentra en la secuencia. En caso contrario devuelve False.
+- **not in** devuelve True si el valor especificado no se encuentra en la secuencia. En caso contrario devuelve False.
+
+```python
+
+a = [1,2,3,4,5]
+  
+#Esta 3 en la lista a?
+print 3 in a # Muestra True 
+  
+#No está 12 en la lista a?
+print 12 not in a # Muestra True
+  
+str = "Hello World"
+  
+#Contiene World el string str?
+print "World" in str # Muestra True
+  
+#Contiene world el string str? (nota: distingue mayúsculas y minúsculas)
+print "world" in str # Muestra False  
+
+print "code" not in str # Muestra True
+
+```
+
+### Operadores de Identidad 
+
+Un operador de identidad se emplea para comprobar si dos variables emplean la misma ubicación en memoria.
+
+- **is** y **is not** son operadores de identidad
+- **is** devuelve True si los operadores se refieren al mismo objeto. En caso contrario devuelve False
+- **is not** devuelve True si los operandos no se refieren al mismo objeto. En caso contrario devuelve False.
+
+Ten en cuenta que dos valores, cuando son iguales, no implica necesariamente que sean idénticos.
+
+```python
+
+a = 3
+b = 3  
+c = 4
+print a is b # muestra True
+print a is not b # muestra False
+print a is not c # muestra True
+
+x = 1
+y = x
+z = y
+print z is 1 # muestra True
+print z is x # muestra True
+
+str1 = "FreeCodeCamp"
+str2 = "FreeCodeCamp"
+
+print str1 is str2 # muestra True
+print "Code" is str2 # muestra False
+
+a = [10,20,30]
+b = [10,20,30]
+
+print a is b # muestra False (ya que las listas son objetos mutables en Python)  
+
+```
+
+
+
+
+
 # Funciones
 
 Los valores que van dentro de la parentesis le llaman parametro
