@@ -1697,6 +1697,36 @@ Funciones son ciudadanos de primera clase, la funciones pueden ser
 argumento de otras funciones 
 
 
+![alt text](https://runestone.academy/ns/books/published/fopp/_images/lambda.gif)
+
+
+- example 1
+
+```python
+def increment(x):
+  return x + 1
+
+result = increment(10)
+print(result)
+
+increment_v2 = lambda x: x + 1
+result = increment_v2(20)
+print(result)
+
+
+full_name = lambda name, last_name: f'Full name is {name.title()} {last_name.title()}'
+
+text = full_name('joel', 'minaya')
+print(text)
+
+#11
+#21
+#Full name is Joel Minaya
+```
+
+
+- example 2
+
 ```python
 def centigrados_a_farhenheit(grados):
     return grados * 1.8 + 32
@@ -1741,6 +1771,221 @@ parametros_default = lambda p1=10, p2=20, p3=30 : p1 + p2 + p3
 asterisco = lambda *args, **kwargs: len(args) + len(kwargs)
 
 ```
+
+### **Map**
+
+ * 1 example with lambda
+
+```python
+numbers = [1,2,3,4]
+number_v2 = []
+number_v3 = []
+
+for i in numbers:
+  number_v2.append(i * 2)
+
+print(numbers)
+print(number_v2)
+
+#Map
+number_v3 = list(map(lambda i: i * 2, numbers))
+print(number_v3)
+
+#[1, 2, 3, 4]
+#[2, 4, 6, 8]
+#[2, 4, 6, 8]
+
+```
+
+
+ * 2 example with lambda --> Suma de dos lista
+
+ ```python
+numbers_1 = [1, 2, 3, 4]
+numbers_2 = [5, 6, 7]
+
+result = list(map(lambda x, y: x + y, numbers_1, numbers_2))
+print(result)
+```
+- 3 example : **Map con diccionarios**
+
+```python
+items = [
+  {
+    'product': 'camisa',
+    'price': 100
+  },
+    {
+    'product': 'pantalones',
+    'price': 300
+  },
+    {
+    'product': 'pantalones 2',
+    'price': 200
+  }
+]
+
+prices = list(map(lambda item: item['price'], items))
+print(prices)
+
+#[100, 300, 200]
+
+```
+- 4 example : Agregando un elemento al diccionario
+
+```python
+items = [
+  {
+    'product': 'camisa',
+    'price': 100
+  },
+    {
+    'product': 'pantalones',
+    'price': 300
+  },
+    {
+    'product': 'pantalones 2',
+    'price': 200
+  }
+]
+
+prices = list(map(lambda item: item['price'], items))
+print(prices)
+
+def add_taxes(item):
+  item['taxes'] = item['price'] * .19
+  return item
+
+new_items = list(map(add_taxes, items))
+print(new_items)
+
+
+#[100, 300, 200]
+#[{'product': 'camisa', 'price': 100, 'taxes': 19.0}, {'product': 'pantalones', 'price': 300, 'taxes': 57.0}, {'product': 'pantalones 2', 'price': 200, 'taxes': 38.0}]
+```
+
+#### **Reto: Map con inmutabilidad**
+
+```python
+items = [
+  {
+    'product': 'camisa',
+    'price': 100
+  },
+    {
+    'product': 'pantalones',
+    'price': 300
+  },
+    {
+    'product': 'pantalones 2',
+    'price': 200
+  }
+]
+
+
+def add_taxes(item):
+  new_item = item.copy()
+  new_item['taxes'] = new_item['price'] * .19
+  return new_item
+
+
+new_items = list(map(add_taxes, items))
+print('New list')
+print(new_items)
+print('Old list')
+print(items)
+
+#New list
+#[{'product': 'camisa', 'price': 100, 'taxes': 19.0}, {'product': 'pantalones', 'price': 300, 'taxes': 57.0}, {'product': 'pantalones 2', 'price': 200, 'taxes': 38.0}]
+#Old list
+#[{'product': 'camisa', 'price': 100}, {'product': 'pantalones', 'price': 300}, {'product': 'pantalones 2', 'price': 200}]
+```
+
+
+### **Filter**
+- Filtrando una lista
+
+```python
+numbers = [1, 2, 3, 4, 5]
+new_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(new_numbers)
+print(numbers)
+
+#[2, 4]
+#[1, 2, 3, 4, 5]
+```
+
+- FIltrando un diccionario
+
+```python
+matches = [
+  {
+    'home_team': 'Bolivia',
+    'away_team': 'Uruguay',
+    'home_team_score': 3,
+    'away_team_score': 1,
+    'home_team_result': 'Win'
+  },
+  {
+    'home_team': 'Brazil',
+    'away_team': 'Mexico',
+    'home_team_score': 1,
+    'away_team_score': 1,
+    'home_team_result': 'Draw'
+  },
+  {
+    'home_team': 'Ecuador',
+    'away_team': 'Venezuela',
+    'home_team_score': 5,
+    'away_team_score': 0,
+    'home_team_result': 'Win'
+  },
+]
+
+print(matches)
+print(len(matches))
+
+new_list = list(filter(lambda item: item['home_team_result'] == 'Win', matches))
+
+print(new_list)
+print(len(new_list))
+
+```
+### **Reduce**
+
+
+- 1 example 
+
+```python
+import functools
+
+numbers = [1, 2, 3, 4]
+
+result = functools.reduce(lambda counter, item: counter + item, numbers)
+print(result)
+
+```
+- 2 example
+
+![alt text](https://static.platzi.com/media/user_upload/graph17-0460921d-a247-4527-8f10-efd947fd20e3.jpg)
+
+
+```python
+import functools
+
+numbers = [1, 2, 3, 4]
+
+def accum(counter, item):
+  print('counter =>', counter)
+  print('item =>', item)
+  return counter + item 
+
+
+result = functools.reduce(accum, numbers)
+print(result)
+```
+
+
 
 ### **¿Callbacks?**
 
@@ -2293,4 +2538,213 @@ resultado = Circulo.area(14)
 print(resultado)
 ```
 
+---
+
+# Operaciones con conjuntos 
+
+### **Union**
+
+```python
+set_a = {'col', 'mex', 'bol'}
+set_b = {'pe', 'bol'}
+
+set_c = set_a.union(set_b) # ó print(set_a | set_b)
+print(set_c)
+
+# {'col', 'pe', 'mex', 'bol'}
+
+```
+
+### **Intersección**
+```python
+set_a = {'col', 'mex', 'bol'}
+set_b = {'pe', 'bol'}
+
+set_c = set_a.intersection(set_b) # ó print(set_a & set_b)
+print(set_c)
+
+# {'bol'}
+
+```
+### **Difference**
+```python
+set_a = {'col', 'mex', 'bol'}
+set_b = {'pe', 'bol'}
+
+set_c = set_a.difference(set_b) # ó print(set_a - set_b)
+print(set_c)
+
+
+# {'bol', 'mex'}
+
+```
+
+### **Symmetric Difference**
+
+```python
+set_a = {'col', 'mex', 'bol'}
+set_b = {'pe', 'bol'}
+
+set_c = set_a.symmetric_difference(set_b) # ó print(set_a ^ set_b)
+print(set_c)
+
+#{'col', 'pe', 'mex'}
+
+```
+
+# Comprehensions
+
+### **List Comprehension**
+
+![alt text](https://static.platzi.com/media/user_upload/384-a6ba6c3d-656d-40ca-9181-873f654ba5a5.jpg)
+
+- Example 1 
+
+```python
+numbers = []
+for element in range(1, 11):
+  numbers.append(element)
+
+print(numbers)
+
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+```
+- Example 1 with List Comprehension
+
+```python
+number_v2 = [element for element in range(1,11)]
+print(number_v2)
+
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+```
+
+- Example 2 
+```python
+numbers = []
+for i in range(1, 11):
+  if i % 2 == 0:
+    numbers.append(i * 2)
+
+
+print(numbers)
+
+#[4, 8, 12, 16, 20]
+
+```
+- Example 2 with List Comprehension
+```python
+numbers_v2 = [ i * 2 for i in range(1, 11) if i % 2 == 0]
+print(numbers_v2)
+
+#[4, 8, 12, 16, 20]
+
+```
+### **Dictionary Comprehension**
+
+![alt text](https://cdn.programiz.com/sites/tutorial2program/files/Python-dictionary-comprehension.png)
+
+
+- Example 1
+
+```python
+dict = {}
+
+for i in range(1, 5):
+  dict[i] = i * 2
+
+print(dict)
+
+#{1: 2, 2: 4, 3: 6, 4: 8}
+
+```
+
+- Example 2 with Dictionary Comprehension
+
+```python
+
+dict_v2 = {i: i * 2 for i in range(1, 5)}
+print(dict_v2)
+#{1: 2, 2: 4, 3: 6, 4: 8}
+
+```
+
+- Example 1 -  Usando una lista de data para convertirlo en diccionario 
+
+
+```python
+import random
+
+countries = ['col', 'mex', 'bol', 'pe']
+population = {}
+
+for country in countries:
+  population[country] = random.randint(1, 100)
+
+print(population)
+
+```
+- Example 2 -  Usando una lista de data para convertirlo en diccionario  --> Dictionary Comprehension
+
+
+```python
+import random
+countries = ['col', 'mex', 'bol', 'pe']
+
+population_v2 = { country: random.randint(1,100) for country in countries}
+print(population_v2)
+
+```
+- Unir dos lista para formar un diccionario
+
+```python
+names = ['nico', 'zule', 'santi']
+ages = [12, 56, 98]
+
+print(list(zip(names, ages)))
+#[('nico', 12), ('zule', 56), ('santi', 98)]
+
+new_dict = {name: age for (name, age) in zip(names, ages)}
+print(new_dict)
+
+#{'nico': 12, 'zule': 56, 'santi': 98}
+
+```
+-  Dictionary Comprehension with condition
+
+```python
+import random
+
+countries = ['col', 'mex', 'bol', 'pe']
+
+population_v2 = {country: random.randint(1, 100) for country in countries}
+print(population_v2)
+
+# {'col': 60, 'mex': 40, 'bol': 17, 'pe': 49}
+
+result = {
+  country: population
+  for (country, population) in population_v2.items() if population > 50
+}
+
+print(result)
+
+# {'col': 60}
+
+```
+
+-  Dictionary Comprehension recorriendo un texto
+```python
+text = 'Hola, soy Minaya'
+
+unique = { c: c.upper() for c in text if c in 'aeiou'}
+print(unique)
+
+```
+
+### **List vs. Tuples vs Sets**
+![alt text](https://static.platzi.com/media/user_upload/2022-10-24%2020_40_09-Window-d9e522c7-f24a-4d9b-9bc7-777708c05677.jpg)
+
+# Crear Módulos
 
